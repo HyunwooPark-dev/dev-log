@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased min-h-screen`}>
         <Providers>
           <Header />
-          {children}
+          {children} {/* 여기에 page.tsx가 들어감 */}
         </Providers>
       </body>
     </html>

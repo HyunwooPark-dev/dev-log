@@ -1,22 +1,21 @@
-import { LogForm } from "@/components/logs/LogForm"
-import { LogList } from "@/components/logs/LogList"
+import { MyStatsSection } from "@/components/dashboard/MyStatsSection"
+import { CommunitySection } from "@/components/dashboard/CommunitySection"
 
-export default function Home() {
+export default function () {
   return (
     <main className="container mx-auto py-8 px-4">
-      <div className="max-w-3xl mx-auto space-y-8">
-        <section>
-          <h1 className="text-3xl font-bold mb-4">오늘의 학습 로그</h1>
-          <p className="text-muted-foreground mb-6">
-            오늘 배운 것을 짧게 기록해보세요.
-          </p>
-          <LogForm />
-        </section>
+      <h1 className="text-3xl font-bold mb-8">대시보드</h1>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">최근 로그</h2>
-          <LogList />
-        </section>
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
+        {/* 내 통계 섹션 (70%) */}
+        <div className="lg:col-span-7">
+          <MyStatsSection />
+        </div>
+
+        {/* 커뮤니티 섹션 (30%) */}
+        <div className="lg:col-span-3">
+          <CommunitySection />
+        </div>
       </div>
     </main>
   )

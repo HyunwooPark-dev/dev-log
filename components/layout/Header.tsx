@@ -16,10 +16,8 @@ import { PenLine, LayoutDashboard, BookOpen, Users, Search, Settings, LogOut } f
 
 const navItems = [
   { href: "/", label: "홈", icon: PenLine },
-  { href: "/dashboard", label: "대시보드", icon: LayoutDashboard },
   { href: "/logs", label: "내 로그", icon: BookOpen },
-  { href: "/community", label: "커뮤니티", icon: Users },
-  { href: "/search", label: "검색", icon: Search },
+  { href: "/lab", label: "실험실", icon: Search },
 ]
 
 export function Header() {
